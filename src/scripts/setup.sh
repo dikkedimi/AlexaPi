@@ -191,14 +191,14 @@ esac
 install_device_config
 
 declare -A config_defaults
-config_defaults[Device_Type_ID]=$(config_get Device_Type_ID)
+config_defaults[Product_ID]=$(config_get Product_ID)
 config_defaults[Security_Profile_Description]=$(config_get Security_Profile_Description)
 config_defaults[Security_Profile_ID]=$(config_get Security_Profile_ID)
 config_defaults[Client_ID]=$(config_get Client_ID)
 config_defaults[Client_Secret]=$(config_get Client_Secret)
 
-read -r -p "Enter your Device Type ID [${config_defaults[Device_Type_ID]}]: " Device_Type_ID
-config_set 'Device_Type_ID' "${Device_Type_ID}"
+read -r -p "Enter your Product ID [${config_defaults[Product_ID]}]: " Product_ID
+config_set 'Product_ID' "${Product_ID}"
 
 read -r -p "Enter your Security Profile Description [${config_defaults[Security_Profile_Description]}]: " Security_Profile_Description
 config_set 'Security_Profile_Description' "${Security_Profile_Description}"
