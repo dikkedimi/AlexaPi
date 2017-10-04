@@ -27,7 +27,7 @@ class Start(object):
 	def index(self):
 		sd = json.dumps({
 			"alexa:all": {
-				"productID": config['alexa']['Device_Type_ID'],
+				"productID": config['alexa']['Product_ID'],
 				"productInstanceAttributes": {
 					"deviceSerialNumber": hashlib.sha256(str(uuid.getnode()).encode()).hexdigest()
 				}
